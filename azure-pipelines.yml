@@ -1,9 +1,8 @@
 # Maven
-- task: JFrogMaven@1
+- task: JFrogPublishBuildInfo@1
   inputs:
-    mavenPomFile: 'pom.xml'
-    goals: 'install'
-    javaHomeOption: 'JDKVersion'
+    buildName: '$(Build.DefinitionName)'
+    buildNumber: '$(Build.BuildNumber)'
 # Build your Java project and run tests with Apache Maven.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
